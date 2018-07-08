@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>HTML5 boilerplate – all you really need…</title>
+</head>
+
+<body id="home">
+
+	<form action="POST">{% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit" value="Save">Save</button>
+	</form>
+
+</body>
+</html>

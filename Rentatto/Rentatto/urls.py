@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from imobiletto.views import ProprietarioCreate, ProprietarioList
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('proprietarios/add/', ProprietarioCreate.as_view(), name='proprietario-add'),
+    path('', ProprietarioList.as_view(), name='proprietario-view')
 ]
